@@ -1,0 +1,127 @@
+aside {
+  position: absolute;
+  top: 1.25%;
+  left: 0.5%;
+  width: 4rem;
+  height: 97.5%;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #050505;
+  border-radius: 12.5px;
+  animation: wipe 1s;
+  transform-style: preserve-3d;
+}
+.menu_editor_icon {
+  position: absolute;
+  top: 0.75rem;
+  left: 50%;
+  height: 4.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transform: translate(-50%);
+}
+.editor_icon {
+  height: 2.25rem;
+}
+.editor_icon:hover {
+  animation: greatRotate 3s infinite 300ms;
+}
+.menu_editor_title {
+  text-align: center;
+  color: #3e3e3e;
+  font: bold 0.75rem "Exo";
+}
+.menu-container {
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.menu_icon {
+  height: 3rem;
+  animation: lighting 1s;
+  animation-delay: 1s;
+  transition: all 400ms;
+  transform: perspective(2rem);
+}
+.menu_item_title {
+  margin: 0;
+  font: bold 0.75rem "Exo";
+  animation: lighting 1s;
+  animation-delay: 1s;
+  transition: all 400ms;
+}
+.menu_icon,
+.menu_item_title {
+  cursor: pointer;
+}
+.menu_icon.rotate-animation:hover {
+  animation: rotate 3s infinite 300ms;
+}
+.menu-container:hover .menu_item_title,
+.menu-container:hover .menu_icon {
+  transform: scale(1.05);
+}
+
+.menu-container:nth-child(2) {
+  color: #e82525;
+}
+.menu-container:nth-child(3) {
+  color: #00f2f2;
+}
+.menu-container:nth-child(4) {
+  color: #ffb800;
+}
+@keyframes wipe {
+  0% {
+    left: -6rem;
+  }
+  70% {
+    left: 0.75%;
+  }
+  100% {
+    left: 0.5%;
+  }
+}
+@keyframes lighting {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(390deg);
+  }
+  90% {
+    transform: rotateZ(-30deg);
+  }
+  90% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes greatRotate {
+  0% {
+    transform: scale(1) rotateZ(0deg);
+  }
+  50% {
+    transform: scale(0.5) rotateZ(360deg);
+  }
+
+  90% {
+    transform: scale(1) rotateZ(0deg);
+  }
+}
